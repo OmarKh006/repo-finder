@@ -3,8 +3,11 @@ import * as element from "./elements";
 export const setSearchResult = (response) => {
   let result = "";
 
-  response.items.map((item) => {
-    result += `
+  if (response === null) {
+    result = "";
+  } else if (response?.items?.length) {
+    response.items.map((item) => {
+      result += `
     <article class="card">
         <img class="img" loading="lazy" src="${item.avatar_url}" />
         <a class="profileLink" href="${item.html_url}" target="_blank">
@@ -12,6 +15,7 @@ export const setSearchResult = (response) => {
         </a>
     </article>
     `;
-  });
+    });
+  }
   element.cards.innerHTML = result;
 };

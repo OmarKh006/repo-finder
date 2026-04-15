@@ -1,5 +1,6 @@
 // import getMessage from "./getMessage";
 import { cards } from "./elements";
+import setLoading from "./setLoadingState";
 import { setMessage } from "./setMessage";
 import { setSearchResult } from "./setSearchResult";
 
@@ -10,10 +11,18 @@ export const performSearch = (searchTerm, isUser) => {
   if (searchTerm.trim()) {
     // getMessage() && setMessage("");
     setMessage("");
+
+    // cards.innerHTML = "";
+
+    setLoading(true);
+
     const query = isUser ? "+type:user" : "+type:org";
     fetch(`${API}${searchTerm}${query}`)
       .then((result) => result.json())
-      .then((response) => setSearchResult(response));
+      .then((response) => setSearchResult(response))
+      .finally(() => {
+        setLoading(false);
+      });
     //response.items
   } else {
     cards.innerHTML = "";
