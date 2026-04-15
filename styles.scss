@@ -5,7 +5,7 @@
   --color-bg: #141c2f;
   --color-card: #1e2a48;
   --color-card-dark: #141c2f;
-  --default-radius: .7rem;
+  --default-radius: 0.7rem;
   --margin-after-form: 4rem;
 
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -68,7 +68,7 @@ body {
   gap: 2rem;
   background-color: var(--color-card);
   border-radius: var(--default-radius);
-  padding: .5rem .5rem .5rem 2rem;
+  padding: 0.5rem 0.5rem 0.5rem 2rem;
 }
 
 .choices {
@@ -145,6 +145,16 @@ body {
   max-width: 100%;
 }
 
+.profileLink,
+.profileLink:visited {
+  color: var(--color-white);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 .loader {
   text-align: center;
   margin-top: var(--margin-after-form);
@@ -173,7 +183,7 @@ body {
 
 .message {
   position: absolute;
-  margin-top: .5rem;
+  margin-top: 0.5rem;
   font-size: 1.3rem;
   color: var(--color-red);
   display: flex;
