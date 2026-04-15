@@ -1,0 +1,30 @@
+{
+  "name": "repo-finder",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/OmarKh006/repo-finder#readme",
+  "bugs": {
+    "url": "https://github.com/OmarKh006/repo-finder/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OmarKh006/repo-finder.git"
+  },
+  "license": "ISC",
+  "author": "Omar Khairy",
+  "type": "commonjs",
+  "main": "script.js",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "sass": "^1.99.0",
+    "vite": "^8.0.8"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.2.0",
+    "globals": "^17.5.0"
+  }
+}
